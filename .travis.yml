@@ -8,6 +8,8 @@ before_install:
 script:
   - docker run shriyansh1193/docker-react npm run test -- --coverage
 
+language: generic
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
@@ -20,3 +22,4 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   security_access_key:
     secure: "$AWS_SECRET_KEY"
+  
